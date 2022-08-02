@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe example</title>
+</head>
+
+<body>
+    <div>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+        scroll me <br>
+    </div>
+
+    <script>
+        const appendIframe = (target, html) => {
+            const prependedHtml = `${html}`;
+
+            const iframe = document.createElement('iframe');
+            target.insertAdjacentElement('afterbegin', iframe);
+            iframe.src = 'about:blank';
+            iframe.style.zIndex = '123123';
+            iframe.srcdoc = prependedHtml;
+            iframe.style.position = 'fixed';
+            iframe.style.background = 'red';
+
+            return iframe;
+        };
+
+        setTimeout(() => {
+            appendIframe(document.body, 'iframe fixed');
+        }, 4000);
+    </script>
+
+</body>
+
+</html>
